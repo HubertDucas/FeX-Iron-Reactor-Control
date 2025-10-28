@@ -115,11 +115,12 @@ def linearized_step(Tout_k, mdot_k):
 ###################################
 
 # Control loop
-def feedback_loop(Tout, kp, ki, kd):
+def feedback_loop(Tout):
     """
     The feedback loop is an implementation of Fig. 5. It takes in 
     Tout computed at timestep k by the function linearized_model(mdot)
     and gives the mdot that should be used at the next iteration
+    (Start with just a simple proportional controller)
 
     Input: Tout (scalar)
     Output: mdot (scalar)
